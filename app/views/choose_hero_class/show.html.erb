@@ -1,0 +1,15 @@
+<h1>Zbierzmy kilka podstawowych informacji o postaci, którą chciałbyś zagrać</h1><!--TODO oh gosh, how about using I18n here and in other places? -->
+
+<!--TODO omg, style me please! -->
+
+<%= semantic_form_for @form, url: choose_hero_class_path, as: :initial_choices do |f| %>
+  <%= f.input :name, label: "Imię bohatera" %>
+
+  <%= f.actions do %>
+    <%= f.action :submit,
+        as: :button,
+        label: "Zapisz i przejdź dalej",
+        button_html: { class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" } %>
+    <%= f.action :cancel, as: :link, label: "Odrzuć zmiany i zacznij od nowa" %><!--TODO where does that link leads, actually? Let's fix that -->
+  <% end %>
+<% end %>
