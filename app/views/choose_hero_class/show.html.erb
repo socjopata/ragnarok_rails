@@ -1,15 +1,38 @@
-<h1>Zbierzmy kilka podstawowych informacji o postaci, którą chciałbyś zagrać</h1><!--TODO oh gosh, how about using I18n here and in other places? -->
+<% if current_user %>
+  <h1>Zbierzmy kilka podstawowych informacji o postaci, którą chciałbyś zagrać</h1><!--TODO oh gosh, how about using I18n here and in other places? -->
 
-<!--TODO omg, style me please! -->
+  <!--TODO omg, style me please! -->
 
-<%= semantic_form_for @form, url: choose_hero_class_path, as: :initial_choices do |f| %>
-  <%= f.input :name, label: "Imię bohatera" %>
+  <%= semantic_form_for @form, url: choose_hero_class_path, as: :initial_choices do |f| %>
+    <%= f.input :name, label: "Imię bohatera" %>
 
-  <%= f.actions do %>
-    <%= f.action :submit,
-        as: :button,
-        label: "Zapisz i przejdź dalej",
-        button_html: { class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" } %>
-    <%= f.action :cancel, as: :link, label: "Odrzuć zmiany i zacznij od nowa" %><!--TODO where does that link leads, actually? Let's fix that -->
+    <%= f.actions do %>
+      <%= f.action :submit,
+          as: :button,
+          label: "Zapisz i przejdź dalej",
+          button_html: { class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" } %>
+      <%= f.action :cancel, as: :link, label: "Odrzuć zmiany i zacznij od nowa" %><!--TODO where does that link leads, actually? Let's fix that -->
+    <% end %>
   <% end %>
+<% else %>
+  <div class="max-w-lg mx-auto mt-16 text-center max-w-sm">
+    <div class="max-w-lg rounded overflow-hidden shadow-lg">
+      <%=image_tag("logo.png")%>
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">Oops ! </div>
+        <p class="text-gray-700 text-base">
+          It looks like you don`t have any account.
+          <br>Please log in or create one and continue!
+        </p>
+      </div>
+      <div class="px-6 pt-4 pb-2">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+          <%= link_to 'Sign up', new_user_registration_path %>
+        </button>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+          <%= link_to 'Log in', new_user_session_path %>
+        </button>
+      </div>
+    </div>
+  </div>
 <% end %>
