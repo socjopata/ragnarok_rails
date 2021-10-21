@@ -1,14 +1,22 @@
 class ChooseHeroClassController < ApplicationController
+   before_action :authenticate_user!
   def show
-    @form = CharacterClassAndBasicInfoForm.new(Hero.new, params[:initial_choices])
+    @form = CharacterClassAndBasicInfoForm.new(current_hero, params[:initial_choices]).as(current_user)
   end
 
   def create
-    @form = CharacterClassAndBasicInfoForm.new(Hero.new, params[:initial_choices])
+    @form = CharacterClassAndBasicInfoForm.new(current_hero, params[:initial_choices]).as(current_user)
     if @form.save
-      redirect_to :next_step #TODO
+      redirect_to choose_hero_class_path #TODO
+      # # :next_step_url
     else
       #TODO redirect to show, ensuring that the form wil lbe reinitialized with user input data, with errors highlighted
     end
+  end
+
+  private
+
+  def current_hero
+    current_user.current_hero || Hero.new
   end
 end

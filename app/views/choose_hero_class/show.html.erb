@@ -1,42 +1,20 @@
-<% if current_user %>
-  <div class="h-auto w-2/3 mx-auto mt-16 rounded overflow-hidden shadow-lg text-center">
-    <div class="h-16 grid grid-cols-1 gap-4 bg-gray-400">
-      <div class="p-5 text-center uppercase tracking-wide text-gray-700 text-lg font-bold">
-        Let us collect some of the basic information about the character you want to play as
-      </div><!--TODO oh gosh, how about using I18n here and in other places? -->
-    </div>
-    <div class="grid h-72 grid-cols-2 gap-6 px-8 rounded">
-      <%= simple_form_for @form, url: choose_hero_class_path, as: :initial_choices do |f| %>
-        <div class="h-16 p-4  uppercase tracking-wide text-gray-700 text-lg font-bold ">
-          <%= f.label :name %>
-          <%= f.input_field :name, class: "shadow appearance-none border rounded w-full py-3 px-3" %>
-        </div>
-    </div>
-    <div class="h-16">
-      <%= f.button :button, "Save and continue", :class => "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"%>
-      <button class="bg-red-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"><%= link_to "Cancel" %></button>
-      <% end %>
-    </div>
+<div class="h-auto w-2/3 mx-auto mt-16 rounded overflow-hidden shadow-lg text-center">
+  <div class="h-16 grid grid-cols-1 gap-4 bg-gray-400">
+    <div class="p-5 text-center uppercase tracking-wide text-gray-700 text-lg font-bold">
+      Let us collect some of the basic information about the character you want to play as
+    </div><!--TODO oh gosh, how about using I18n here and in other places? -->
   </div>
-<% else %>
-  <div class="max-w-lg mx-auto mt-16 text-center max-w-sm">
-    <div class="max-w-lg rounded overflow-hidden shadow-lg">
-      <%= image_tag("logo.png") %>
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">Oops ! </div>
-        <p class="text-gray-700 text-base">
-          It looks like you don`t have any account.
-          <br>Please log in or create one and continue!
-        </p>
+  <div class="grid h-72 grid-cols-2 gap-6 px-8 rounded">
+    <%= simple_form_for @form, url: choose_hero_class_path, as: :initial_choices, method: :post do |f| %>
+      <div class="h-16 p-4  uppercase tracking-wide text-gray-700 text-lg font-bold ">
+        <%= f.label :name %>
+        <%= f.input_field :name, class: "shadow appearance-none border rounded w-full py-3 px-3" %>
       </div>
-      <div class="px-6 pt-4 pb-2">
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-          <%= link_to 'Sign up', new_user_registration_path %>
-        </button>
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-          <%= link_to 'Log in', new_user_session_path %>
-        </button>
-      </div>
-    </div>
   </div>
-<% end %>
+  <div class="h-16">
+    <%= f.button :button, "Save and continue", :class => "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"%>
+    <button class="bg-red-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"><%= link_to "Cancel" %></button>
+    <%= current_user.id %>
+    <% end %>
+  </div>
+</div>
