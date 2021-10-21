@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
-gem 'formtastic'
+gem 'simple_form'
 gem 'rails-patterns'
 
 group :development, :test do
