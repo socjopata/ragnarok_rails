@@ -12,9 +12,10 @@
       </div>
   </div>
   <div class="h-16">
-    <%= f.button :button, "Save and continue", :class => "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"%>
-    <button class="bg-red-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"><%= link_to "Cancel" %></button>
-    <%= current_user.id %>
+    <%= f.button :submit, "Save and continue", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"%>
+    <button class="bg-red-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+      <%= link_to "Cancel", @hero, method: :delete, data: { confirm: "Are you sure?" } %>
+    </button>
     <% end %>
   </div>
 </div>
