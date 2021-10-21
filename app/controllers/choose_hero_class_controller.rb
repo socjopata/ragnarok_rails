@@ -14,6 +14,14 @@ class ChooseHeroClassController < ApplicationController
     end
   end
 
+  def destroy
+   @hero = current_user.current_hero
+   @hero.destroy
+   respond_to do |format|
+     format.html { redirect_to root_url, notice: "Hero was successfully destroyed." }
+   end
+  end
+
   private
 
   def current_hero
