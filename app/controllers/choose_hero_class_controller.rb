@@ -22,7 +22,7 @@ class ChooseHeroClassController < ApplicationController
      @hero = current_user.current_hero
      @hero.destroy
      respond_to do |format|
-       format.html { redirect_to root_url, notice: "Hero was successfully destroyed." }
+       format.html { redirect_to root_url, notice: t(:success_destroy) }
      end
     else
       redirect_to root_path
