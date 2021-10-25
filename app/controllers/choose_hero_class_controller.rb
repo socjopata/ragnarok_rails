@@ -10,9 +10,12 @@ class ChooseHeroClassController < ApplicationController
       redirect_to choose_hero_class_path #TODO
       # # :next_step_url
     else
-      #TODO redirect to show, ensuring that the form wil lbe reinitialized with user input data, with errors highlighted
+      respond_to do |format|
+        format.html { render :show, status: :unprocessable_entity }
+        format.json { render json: @form.errors, status: :unprocessable_entity }
+        end
+      end
     end
-  end
 
   def destroy
     if current_user.current_hero
