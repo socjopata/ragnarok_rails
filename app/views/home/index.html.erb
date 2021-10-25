@@ -5,15 +5,14 @@
     <div class="max-w-lg rounded overflow-hidden shadow-lg">
       <%=image_tag("logo.png")%>
       <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">Welcome ! </div>
+        <div class="font-bold text-xl mb-2"><%= t(:welcome) %></div>
           <p class="text-gray-700 text-base">
-            You are about to explore the custom character sheet creator.
-            Just hit the button below and your journey will start.
+            <%= t(:you_are_about) %>
           </p>
       </div>
       <div class="px-6 pt-4 pb-2">
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-          <%= link_to 'Let`s get started', choose_hero_class_path %>
+          <%= link_to t(:start), choose_hero_class_path %>
         </button>
       </div>
     </div>
@@ -23,15 +22,14 @@
     <div class="max-w-lg rounded overflow-hidden shadow-lg">
       <%=image_tag("logo.png")%>
       <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">Welcome ! </div>
+        <div class="font-bold text-xl mb-2"><%= t(:welcome) %></div>
           <p class="text-gray-700 text-base">
-        You are only  one step away from getting access to this page.
-        Please create an account and continue!
+        <%=t(:you_need_account) %>
           </p>
       </div>
       <div class="px-6 pt-4 pb-2">
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-          <%= link_to 'Sign up', new_user_registration_path %>
+          <%= link_to t(:sign_up), new_user_registration_path %>
         </button>
       </div>
     </div>
