@@ -1,6 +1,7 @@
 class CharacterClassAndBasicInfoForm < Patterns::Form
   attribute :name, String
-  validates :name, length: { minimum: 3 }, format: { with: /\A[a-zA-Z]+\z/, message: "Only letters allowed" }
+
+  validates :name, length: { minimum: 3 }, format: { with: /\A[a-zA-Z]+\z/, message: I18n.t(:only_letters) }
 
   private
 
