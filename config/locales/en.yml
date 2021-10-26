@@ -30,4 +30,26 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  are_you_sure: Are you sure?
+  basic_info_choose_head: Let us collect some of the basic information about the character you want to play as
+  cancel: Cancel
+  char_min: characters minimum
+  confirm_instructions: idn't receive confirmation instructions?
+  confirm_password: Password confirmation
+  error:
+      one: error
+      few: errors
+  forgot_passowrd: Forgot your password?
+  name: name
+  only_letters: Only letters allowed!
+  password: Password
+  plerror: errors
+  remember_me: Remember me
+  save_and_continue: Save and continue
+  sign_in: Sign in
+  sign_up: Sign up
+  start: Let's get started!
+  success_destroy: Hero was successfully destroyed.
+  welcome: Welcome!
+  you_are_about: You are about to explore the custom character sheet creator. Just hit the button below and your journey will start.
+  you_need_account: You are only  one step away from getting access to this page. Please create an account and continue!
