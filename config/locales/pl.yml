@@ -1,0 +1,24 @@
+pl:
+  are_you_sure: Na pewno?
+  basic_info_choose_head: Zbierzmy trochę informacji o postaci, którą chcesz grać
+  cancel: Anuluj
+  char_min: znaków minimum
+  confirm_instructions: Nie dotarły do Ciebie instrukcje potwierdzenia?
+  confirm_password: Potwierdź hasło
+  error:
+      one: błąd
+      few: błędy
+  forgot_passowrd: Nie pamiętasz hasła?
+  name: imię
+  only_letters: Tylko litery są dopuszczalne
+  password: Hasło
+  plerror: błędy
+  remember_me: Zapamiętaj mnie
+  save_and_continue: Zapisz i kontynuuj
+  sign_in: Zaloguj się
+  sign_up: Zarejestruj się
+  start: Zaczynajmy!
+  success_destroy: Bohater został pomyślnie usunięty.
+  welcome: Witaj!
+  you_are_about: Za chwilę zapoznasz się z kreatorem postaci. Wystarczy nacisnąć przycisk poniżej żeby rozpocząć podróź.
+  you_need_account:  Tylko jeden krok dzieli Cię od rozpoczęcia przygody. Załóż konto i kontynuuj.
