@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_21_071929) do
+ActiveRecord::Schema.define(version: 2021_10_26_125752) do
+
+  create_table "character_classes", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "heros", force: :cascade do |t|
     t.string "name", null: false
@@ -18,6 +24,8 @@ ActiveRecord::Schema.define(version: 2021_10_21_071929) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
     t.boolean "work_in_progress"
+    t.integer "character_class_id"
+    t.index ["character_class_id"], name: "index_heros_on_character_class_id"
     t.index ["user_id"], name: "index_heros_on_user_id"
   end
 
@@ -42,5 +50,15 @@ ActiveRecord::Schema.define(version: 2021_10_21_071929) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "virtues", force: :cascade do |t|
+    t.integer "character_class_id", null: false
+    t.string "name", null: false
+    t.text "description", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["character_class_id"], name: "index_virtues_on_character_class_id"
+  end
+
+  add_foreign_key "heros", "character_classes"
   add_foreign_key "heros", "users"
 end

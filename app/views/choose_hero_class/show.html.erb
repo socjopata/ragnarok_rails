@@ -10,6 +10,9 @@
         <%= f.label :name %>
         <%= f.input_field :name, class: "shadow appearance-none border rounded w-full py-3 px-3" %>
       </div>
+<!--#TODO lets add a dropdown for picking a character class. When user picks a particular character_class, the data about virtues should be fetched asynchronously (ajax)      -->
+<!--#TODO assuming we have such data mentioend in the previous todo, present virtues to the user as a choice. You have 100% freedom cwhen it comes to the interface, however consider that: 1) according to the game Manual user has to pick two. 2) some virtues may come up with an additional choice to be made by the user 3) user should be able to change his mind        -->
+<!--#TODO assuming the above is done, we have to preserve the user choices with relation to the current hero  -->
   </div>
   <div class="h-16">
     <%= f.button :button, "Save and continue", :class => "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"%>
