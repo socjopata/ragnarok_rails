@@ -22,3 +22,162 @@ pl:
   welcome: Witaj!
   you_are_about: Za chwilę zapoznasz się z kreatorem postaci. Wystarczy nacisnąć przycisk poniżej żeby rozpocząć podróź.
   you_need_account:  Tylko jeden krok dzieli Cię od rozpoczęcia przygody. Załóż konto i kontynuuj.
+
+  berserker: Berzerker
+  furiat: Furiat
+  furiat_desc: Siła Woli Weterana wzrasta na stałe o 2 pkt. Na początku starcia, w ramach darmowej akcji w swojej inicjatywie,
+               Weteran wprowadza się w trans i wykonuje test Siły Woli. Za każdy poziom sukcesu, który uda mu się osiągnąć, otrzymuje jedną turę,
+               w której wszystkie zadane mu Obrażenia zmniejszane są o połowę. Po upływie tego czasu, aby podtrzymać trans, co rundę wykonuje Trudny test Siły Woli.
+               Jeżeli nie uda mu się go podtrzymać, zatrzymuje się oszołomiony na k6 tur, podczas których nie może czynnie atakować ani poruszać się, a jedynie bronić.
+  pogarda_smierci: Pogarda Śmierci
+  pogarda_smierci_desc: Weteran śmieje się Hel prosto w twarz, mając śmierć za nic! Najważniejsze, by zabrać ze sobą jak najwięcej wrogów! Na początku każdego starcia,
+                        zanim ktokolwiek inny zdąży zareagować, Weteran może wydać z siebie szyderczy okrzyk, skupiający na nim uwagę Szeregowych przeciwników, którzy walczą z nim tak długo,
+                        aż nie zostaną zaatakowani przez kogoś innego. Doświadczeni i Elitarni przeciwnicy mogą obronić się przed działaniem okrzyku dzięki udanemu testowi Siły Woli.
+                        Jeżeli Weteran został zaskoczony, nie może korzystać z tej zalety w danym starciu, chyba że wyda 2 PK. Dodatkowo Koncentracja postaci wzrasta na stałe o 5 pkt.
+  runiczne_tatuaze: Runiczne Tatuaże
+  runiczne_tatuaze_desc: Weteran, dzięki pokrywającym jego ciało mistycznym tatuażom, zwiększa na stałe swoją Entropię i Wytrzymałość o  1 pkt; ponadto jego Odporność na Hekseri wzrasta o 5 pkt.
+  einher: Einher
+  cybernetyczne_cialo: Cybernetyczne Ciało
+  cybernertyczne_cialo_desc: Weteran podwaja swoją Neurostabilność. Ponadto wykonuje dwa rzuty 2k10 w poniższej tabeli, aby po odrodzeniu powrócić do formy.
+                             Wylosowane wszczepy otrzymywane są za darmo i nie mogą się powtórzyć.
+  niezniszczalny: Niezniszczalny
+  niezniszczalny_desc: Witalność Weterana zwiększana jest na stałe o +10 pkt., a wszystkie Poziomy Trudności testów Wytrzymałości są zmniejszane o jeden próg.
+                       Ponadto, wydając 5 PK, do początku kolejnej rundy Weteran nie otrzymuje żadnych Obrażeń, chyba że ich jednorazowa wartość odebrałaby mu
+                       wszystkie punkty Witalności, np. spada z dwudziestego piętra, zostaje zmiażdżony przez walący się budynek itp. Użycie Zalety musi zostać
+                       zadeklarowane na początku rundy (przed akcjami wszystkich graczy).
+  z_grubej_rury: Z Grubej Rury
+  z_grubej_rury_desc: Einher zwiększa na stałe Celność oraz Obrażenia każdej broni Ciężkiej, jaką się posługuje, o +3 pkt.
+  huskarl: Huskarl
+  chwila_chwaly: Chwila Chwały
+  chwila_chwaly_desc: Po aktywowaniu tej Zalety podczas walki przez dwie rundy Huskarl podnosi swoją Obronę o wartość Entropii. W tym czasie Weteran odporny jest na Pecha,
+                      a Krytyki przeciw niemu są traktowane jak zwykłe, co oznacza, że nadal muszą przewyższyć jego Obronę lub się z nią zrównać itd. Aby ponownie skorzystać
+                      z tej zalety, Weteran musi odbyć medytację przez co najmniej 5 minut, podczas której jest bezbronny.
+  hekser: Hekser
+  hekser_desc: Weteran może rzucać Hekseri w walce, nie dając przeciwnikowi darmowego okazjonalnego ataku.
+  wyga: Wyga
+  wyga_desc: Na etapie tworzenia postaci Weteran otrzymuje dodatkowe 10 PD, a koszt nauczenia się wszystkich Hekseri na stałe zmniejszony jest o 1 pkt.
+  jaeger: Jaeger
+  widze_wszystko: Widzę Wszystko
+  widze_wszystko_desc: Podczas sesji Weteran może wykonać tyle Przerzutów testu Wyczulonych Zmysłów, ile posiada punktów Percepcji. Oprócz tego dodaje 5 pkt.
+                       do wyników wszystkich testów chroniących go przed zaskoczeniem. Ponadto, wydając 4 PK, może automatycznie uniknąć jednego celnego ataku,
+                       co deklaruje przed rzutem na obrażenia – ta część zalety nie działa, kiedy Jaeger jest Zaskoczony.
+  zapach_krwi: Zapach Krwi
+  zapach_krwi_desc: Weteran doskonale zna się na odszukiwaniu tych, którzy marzą o zniknięciu. Otrzymuje +2 pkt. do Infiltracji i Koneksji. Ponadto Weteran może
+                    wykonać tyle Przerzutów testów Infiltracji lub Koneksji, ile wynosi jego Inteligencja.
+  zywy_lub_martwy: Żywy lub Martwy
+  zywy_lub_martwy_desc: Nie wszystko, na co polujesz, musi umierać. Z drugiej strony, zwłoki łatwiej się transportuje. Wydając 4 PK, Weteran otrzymuje jeden dodatkowy,
+                        darmowy Atak, który może przekroczyć standardową liczbę Ciosów lub Szybkostrzelność broni. Ponadto przed wykonaniem ataku Weteran może zadeklarować
+                        chęć oszczędzenia swej ofiary. W takim przypadku, nawet jeżeli obrażenia od ciosu miałyby się okazać śmiertelne (równe lub większe od Witalności poniżej zera),
+                        przeciwnik jest nieprzytomny, ale nie ginie. Żadna część zalety nie może być wykorzystana częściej niż raz na turę.
+  jarl: Jarl
+  bron_rodowa: Broń Rodowa
+  bron_rodowa_desc: Weteran rozpoczyna grę z nielegendarną, wybraną przez siebie bronią Białą posiadającą trzy możliwości modyfikacji wybrane przez gracza. Postać ignoruje koszt zakupu
+                    (w stykerach) oręża i jego rozwinięć oraz otrzymuje +1 pkt do umiejętności Broń Biała. Ponadto, raz na turę i po wydaniu 4 PK, przed akcjami pozostałych postaci,
+                    Jarl może wykonać jeden darmowy atak bronią przeznaczoną do walki w Zwarciu.
+  stac_mnie: Stać Mnie
+  stac_mnie_desc: Nie ma takiej rzeczy, której nie da się kupić za pieniądze. Weteran wybiera Zaletę innej klasy i używa jej tak, jakby była jego Zaletą Klasową (zamieniając w jej
+                  tekście klasę postaci, od której pożycza zaletę, na swoją).
+  zasoby: Zasoby
+  zasoby_desc: Weteran posiada pokaźny majątek startowy, który wynosi aż 8.000 stykerów. Ponadto ma dostęp do rodowej fortuny, jednak każdorazowe zaczerpnięcie z niej sporo go kosztuje.
+               Wydając 1 Punkt Łaski Norn, uzyskuje 100 stykerów.
+  skald: Skald
+  natchnienie: Natchnienie
+  natchnienie_desc: Raz na Scenę możesz zainspirować sojusznika, który znajduje się w Zasięgu Bliskim. Wybraniec otrzymuje jedną dodatkową turę, w której może ponownie działać
+                    (zarówno ruch, jak i walka). Darmowa tura postaci rozgrywana jest natychmiast po Skaldzie. Zaleta traktowana jest jako Akcja Darmowa (nie zajmuje czasu).
+  persona: Persona
+  persona_desc: Potrafisz połączyć sztukę z hekseri, dzięki czemu manipulujesz umysłami innych. Wydaj 1 PK, aby wykonać przeciwstawny test Charyzmy kontra Siła Woli celu. Jeżeli wygrasz,
+                możesz zastosować jeden z dwóch efektów;
+                1. w czasie walki nakładasz na ofiarę Fatum do początku twojej następnej tury,
+                2. poza walką skupiasz na sobie uwagę celu, przez co wszystkie jego testy Wyczulonych Zmysłów i Refleksu udają mu się tylko na Krytyku.
+                   Efekt utrzymuje się przez liczbę rund równą twojej Entropii.
+  skupienie: Skupienie
+  skupienie_desc: Za każdym razem, kiedy odzyskujesz punkty Koncentracji, Przesunięć lub Łaski Norn, zyskujesz o jeden punkt więcej. Ponadto zwiększasz na stałe swoją Koncentrację
+                  o wartość Inteligencji.
+  techmistrz: Techmistrz
+  szalony_geniusz: Szalony Geniusz
+  szalony_geniusz_desc:  Weteran, podobnie jak Odyn, zapłacił wysoką cenę za zdobycie wiedzy – stał się niestabilny i gwałtowny w swoim zachowaniu. Zwiększ na stałe Inteligencję o +2 pkt.,
+                         natomiast Opanowanie zmniejsz o -2 pkt. oraz podnieś wszystkie początkowe Umiejętności wynikające z Klasy o +1 pkt. Majątek startowy zmniejszony jest do 100 Stykerów,
+                         ponadto ilość pieniędzy podczas tworzenia postaci nie może być już w żaden sposób podwyższona (zalety, atuty, itp.).
+  tajemnice: Tajemnice
+  tajemnice_desc: Weteran poznał zapomniane fragmenty tajników wiedzy cywilizacji, której język mistyczny zna. Techmistrz rozpoczyna grę z trzema prostymi Hekseri i otrzymuje
+                  jeden Pomniejszy Artefakt.
+  zaufaj_mi_jestem_inzynierem: Zaufaj mi, jestem Inżynierem
+  zaufaj_mi_jestem_inzynierem_desc: Weteran może ulepszyć każdą posiadaną broń i pancerz (nie ponosząc żadnych kosztów), dzięki czemu zwiększa ich parametry w następujący sposób..
+                                    Broń +2 pkt. do Obrażeń i +1 pkt do Celności, Wartość Pancerza o +2 pkt. i jego Obronę o +1 pkt. Techmistrz może wykonać dla innych graczy modyfikacje,
+                                    jednak aby mogli oni korzystać ze zmodyfikowanych urządzeń, muszą wydać 3 PD za każdy przedmiot. Udoskonalenie może być wykonane raz na danym przedmiocie.
+                                    Ekwipunek wykupiony przed pierwszą sesją udoskonalany jest od razu. Ulepszenie sprzętu nabytego w trakcie kolejnych sesji zajmuje 5 godzin i wymaga
+                                    wydania 2 PK. Techmistrz może zredukować ten czas, wykonując test Techniki – za każdy uzyskany poziom trudności powyżej Łatwego zmniejsza czas oczekiwania
+                                    o jedną godzinę.
+  thane: Thane
+  analityczny_umysl: Analityczny Umysł
+  analityczny_umysl_desc: Raz na sesję za każdy punkt Inteligencji, przed wykonaniem rzutu na Wyczulone Zmysły, Infiltrację, Wiedzę lub Charyzmę bohater otrzymuje premię  +5 pkt. do ww. testów.
+  strzelec_wyborowy: Strzelec Wyborowy
+  strzelec_wyborowy_desc: Postać na stałe podnosi Umiejętność Broń Krótka o +1 pkt. Wydając 4 PK, na początku rundy, Weteran może wykonać strzał przed wszystkimi innymi akcjami
+                          pozostałych uczestników starcia. Atak jest darmowy, nie liczy się do maksymalnej liczby strzałów w turze i zadaje podwójne Obrażenia
+                          (najpierw odliczana jest wartość pancerza, następnie podwajamy liczbę zadanych Obrażeń).
+  zahartowany: Zahartowany
+  zahartowany_desc: Za każdym razem, kiedy Weteran korzysta z Przesunięcia, otrzymuje do niego premię +2 pkt. Ponadto na koniec każdej sesji zdobywa dodatkowe 2 Punkty Doświadczenia.
+  trickster: Trickster
+  kanciarz: kanciarz
+  kanciarz_desc: Trickster zawsze wie, gdzie i za ile można kupić nielegalne towary, zna dilerów, paserów, speluny, handlarzy, kupców i potrafi to załatwić szybko i tanio. W efekcie
+                 wszystkie towary, jakie kupuje, mają obniżoną cenę o 10% (Zaleta kumuluje się z Atutem Handel), umiejętność Koneksje zwiększana jest o +3 pkt., a grę
+                 rozpoczyna z dodatkowymi 2.000 stykerów (może je wydać od razu podczas tworzenia postaci).
+  nieczysta_zagrywka: Nieczysta Zagrywka
+  nieczysta_zagrywka_desc: Trickster zwiększa umiejętność Broń Biała o +1 pkt. Raz za każdy punkt Opanowania, po nieudanym ataku przeciwnika skierowanym w Trickstera w walce w zwarciu,
+                           w ramach akcji darmowej, może on wykonać darmowy, natychmiastowy atak w tego samego wroga z zasadą specjalną; Przebicie (połowa pancerza).
+  oszust: Oszust
+  oszust_desc: Weteran może czerpać z dwóch różnych specjalistycznych grup Wszczepów, zwiększa swoją Neurostabilność o +10 pkt. i otrzymuje 1.500 stykerów.
+               Umiejętność Trik i Fortel zwiększana jest o +3 pkt.
+  ulfhednar: Ulfhednar
+  akrobata: Akrobata
+  akrobata_desc: Weteran zwiększa swoje Wysportowanie o +3 pkt., a wydając 2 PK, może obniżyć Poziom Trudności testu o jeden próg. Akcja musi być zadeklarowana przed wykonaniem rzutu.
+    Ponadto wydając 3 PK, po zadeklarowaniu użycia zalety w ramach akcji darmowej, do początku następnej tury Ulfhednara wszystkie skierowane w niego ataki dystansowe trafiają tylko na Krytyku.
+  kameleon: Kameleon
+  kameleon_desc: wydając 4 PK, Weteran staje się Niewidzialny na okres jednej godziny. Aktywacja zalety zajmuje minutę. Aby pozostać niezauważonym, Weteran musi zdać test Infiltracji
+                 o poziomie trudności zależnym od okoliczności (np. przekradnięcie się obok pojedynczego strażnika – Standardowy, przemknięcie pomiędzy grupą przeciwników – Bardzo
+                 Trudny; decyzję podejmuje MG). Każda akcja ataku wykonana przez Ulfhednara natychmiast kończy działanie Kameleona.
+  zabojca: Zabójca
+  zabojca_desc: Weterana podnoszony jest o +3 pkt. Ponadto wydając 2 PK, zwiększasz swoje Trafienie i Obrażenia w pojedynczym ataku o wartość Zręczności. Aktywacja zalety
+                musi być zadeklarowana przed rzutem na trafienie i jest akcją darmową.
+  wieszcz: Wieszcz
+  badasz_hekseri: Badacz Hekseri
+  badacz_hekseri_desc: Wieszcz rozpoczyna grę z wszystkimi Prostymi Hekseri należącymi do jednej grupy, a jego Hekseri wzrasta na stałe o +1 pkt.
+  mistrz_entropii: Mistrz Entropii
+  mistrz_entropii_desc: Moc Weterana zwiększona jest na stałe o +20 pkt. Natomiast zasięg każdego hekseri zwiększa się aż dwukrotnie.
+  tajemnica_arkana: Tajemnica Arkana
+  tajemnica_arkana_desc: Wieszcz zwiększa swoje Hekseri o +1 pkt. Ponadto w trakcie jednej sesji, raz za każdy punkt Entropii, może użyć Złożonego Hekseri na zasadach Prostego
+                         lub Mistrzowskiego na zasadach Złożonego.
+  wiking: Wiking
+  poczulem_krew: Poczułem Krew
+  poczulem_krew_desc: Weteran może wykonać Przerzut dowolnego testu wykonanego w trakcie walki. Aby użyć tej zdolności ponownie, musi zostać zraniony przez przeciwnika.
+                      Wiking rozpoczyna grę, zwiększając wybraną Umiejętność o +1 pkt.
+  potomek_tyra: Potomek Tyra
+  potomek_tyra_desc: Raz na walkę z danym przeciwnikiem, po nietrafionym ciosie, Weteran Przerzuca test Trafienia, otrzymując premię +3 pkt. Jeżeli dzięki tej zalecie zabije
+                     wroga, odzyskuje 1 pkt Łaski Norn.
+  wiarus: Wiarus
+  wiarus_desc: Weteran zwiększa do końca swojej tury dwa z poniższych parametrów; Trafienie, Obronę, Refleks, Wysportowanie lub zadawane Obrażenia o +3 pkt.
+               Zdolność można aktywować podczas sesji tyle razy, ile wynosi Opanowanie postaci.
+  wolwa: Wölwa
+  potega_nadziei: Potęga Nadziei
+  potega_nadziei_desc: Postać, korzystając z magii leczącej, może zwiększyć liczbę uzdrowionych ran o +10 pkt. Ponadto wydając 1 PK, bohaterka może zmienić moc leczącą hekseri
+                       w klątwę, dzięki czemu zamiast uzdrowić, zadaje analogiczną liczbę ran. Wölwa rozpoczyna grę z dwoma wybranymi, prostymi Hekseri – Seidr.
+  wladczyni_losu: Władczyni Losu
+  wladczyni_losu_desc: Wydając Punkt Łaski Norn, Wölwa może zmienić sukces (udany test) wybranej istoty w porażkę. Decyzja o skorzystaniu z zalety musi być podjęta po rzucie
+                       wykonanym przez MG, jednak przed rzutem na obrażenia itd. i nie może być wykorzystana więcej niż raz względem danej postaci.
+  wiez_z_yggdrasilem: Więź z Yggdrasilem
+  wiez_z_yggdrasilem_desc: Wölwy potrafią w naturalny sposób wędrować po Sieci, jeżeli tylko mają do niej dostęp.  Zwiększasz na stałe swoją umiejętność Hakowanie o +2 pkt.
+                           Ponadto, gdy przebywasz w Sieci, zadajesz zawsze podwójne obrażenia (podwojeniu ulega faktyczna liczba zadanych obrażeń, które przebiły się przez
+                           pancerz i osłony; ta zdolność nie podwaja bazowych obrażeń broni czy hekseri). Każdy z towarzyszy Wölwy, który nie posiada punktów w Hakowaniu,
+                           na czas pobytu w Yggdrasilu jest traktowany, jak gdyby posiadał tę umiejętność na poziomie 1.
+  walkiria: Walkiria
+  corka_frei: Córka Frei
+  corka_frei_desc: Prezencja Walkirii zwiększona jest o +5 pkt. Ponadto Walkiria zyskuje umiejętność Charyzma na poziomie 3 pkt. Wszyscy są pod jej ogromnym wrażeniem.
+                   Każdy inteligentny humanoid, który zaatakuje Walkirię, otrzymuje do końca tej rundy walki efekt; Fatum (działa raz na danego przeciwnika).
+  gwiazda_heimdala: Gwiazda Heimdala
+  gwiazda_heimdala_desc: Walkiria może podłączyć się do statku za pomocą specjalnego wszczepu, co daje jej pełną kontrolę nad pojazdem. Kiedy postać jest podłączona
+                         do statku, jego Parametry zwiększone są o +1 pkt. Bohaterka zyskuje atut Specjalista w Ostrzale Kosmicznym i może wykonać tyle przerzutów umiejętności
+                         Pilotażu (w trakcie sesji) ile wynosi jej PER.
+  skrzydla_asgardu: Skrzydła Asgardu
+  skrzydla_asgardu_desc: Postać posiada niezwykły wszczep – cybernetyczne Skrzydła schowane w plecach. Dzięki temu może latać, wydając 1 PK za każde 10 minut lotu. Korzystanie z tej
+                         Zalety sprawdzane jest testem Pilotażu.
+
