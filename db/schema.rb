@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_26_125752) do
+ActiveRecord::Schema.define(version: 2021_10_27_135642) do
 
   create_table "character_classes", force: :cascade do |t|
-    t.string "name", null: false
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "internal_name"
   end
 
   create_table "heros", force: :cascade do |t|
@@ -52,10 +53,11 @@ ActiveRecord::Schema.define(version: 2021_10_26_125752) do
 
   create_table "virtues", force: :cascade do |t|
     t.integer "character_class_id", null: false
-    t.string "name", null: false
-    t.text "description", null: false
+    t.string "name"
+    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "internal_name"
     t.index ["character_class_id"], name: "index_virtues_on_character_class_id"
   end
 
