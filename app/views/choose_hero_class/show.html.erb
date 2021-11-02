@@ -1,34 +1,85 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(function () {
+        $(document).on('change', '.remote-select', function (e) {
+            let target = $(this).attr('data-target')
+            let url = $(this).find(":selected").attr('data-url')
+            if (url){
+                $.ajax({
+                    url: url,
+                    method: 'GET',
+                    success: function (json) {
+                        let target_select = $(target)
+                        target_select.empty()
+                        json.map(function (item) {
+                            value = $('<option></option>').attr('value', item.id).text(item.name)
+                            target_select.append(value)
+                        })
+                        target_select.trigger("chosen:updated")
+                    },
+                    error: function () { }
+                })
+            }
+        })
+    })
+</script>
+<link
+  href="https://cdn.jsdelivr.net/npm/@tailwindcss/custom-forms@0.2.1/dist/custom-forms.css"
+  rel="stylesheet"
+  />
 <div class="h-auto w-2/3 mx-auto mt-16 rounded overflow-hidden shadow-lg text-center">
   <div class="h-16 grid grid-cols-1 gap-4 bg-gray-400">
     <div class="p-5 text-center uppercase tracking-wide text-gray-700 text-lg font-bold">
       <%= t(:basic_info_choose_head) %>
     </div><!--TODO oh gosh, how about using I18n here anrails <script type="text/javascript" charset="utf-8"></script>d in other places? -->
   </div>
-  <div class="grid h-72 grid-cols-2 gap-6 px-8 rounded">
-    <%= simple_form_for @form, url: choose_hero_class_path, as: :initial_choices, method: :post do |f| %>
-      <% if @form.errors.any? %><!--TODO in case of errors during validation, the attributes should be translated -->
-        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" id="error_explanation">
-          <h2><%= @form.errors.count %> <%= t('error', count: (@form.errors.count)) %>:</h2>
-          <ul>
-            <% @form.errors.each do |error| %>
-              <li><%= error.full_message %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
-      <div class="h-16 p-4  uppercase tracking-wide text-gray-700 text-lg font-bold ">
+  <% if @form.errors.any? %><!--TODO in case of errors during validation, the attributes should be translated -->
+    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" id="error_explanation">
+      <h2><%= @form.errors.count %> <%= t('error', count: (@form.errors.count)) %>:</h2>
+      <ul>
+        <% @form.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= simple_form_for @form, url: choose_hero_class_path, as: :initial_choices, method: :post do |f| %>
+    <div class="grid h-72 grid-cols-2 gap-6 px-8 rounded">
+      <div class="h-16 p-4 tracking-wide text-gray-700 font-bold">
         <%= f.label :name, t(:name) %>
         <%= f.input_field :name, class: "shadow appearance-none border rounded w-full py-3 px-3" %>
       </div>
-<!--#TODO lets add a dropdown for picking a character class. When user picks a particular character_class, the data about virtues should be fetched asynchronously (ajax)      -->
+      <div class="field h-16 p-4 tracking-wide text-gray-700 font-bold">
+        <%= f.label :character_class_id, t(:char_class) %>
+        <%= f.select :character_class_id,
+                     options_for_select(CharacterClass.select_values, @form&.character_class_id),
+                     { include_blank: true },
+                     { class: 'remote-select form-select block w-full mt-1 shadow appearance-none border rounded w-full py-3 px-3',
+                       data: { target: '#initial_choices_virtue_1_internal_id, #initial_choices_virtue_2_internal_id' } } %>
+      </div>
+      <div class="field h-16 p-4 tracking-wide text-gray-700 font-bold">
+        <%= f.label :virtue_1_internal_id, t(:choose_virtue) %>
+        <%= f.select :virtue_1_internal_id,
+                     options_for_select(Virtue.select_values(@form), @form&.virtue_1_internal_id),
+                     { include_blank: false },
+                     { class: "form-select block w-full mt-1 shadow appearance-none border rounded w-full py-3 px-3" } %>
+      </div>
+      <div class="field h-16 p-4 tracking-wide text-gray-700 font-bold">
+        <%= f.label :virtue_2_internal_id, t(:choose_virtue) %>
+        <%= f.select :virtue_2_internal_id,
+                     options_for_select(Virtue.select_values(@form), @form&.virtue_2_internal_id),
+                     { include_blank: false },
+                     { class: "form-select block w-full mt-1 shadow appearance-none border rounded w-full py-3 px-3" } %>
+      </div>
+      <!--#TODO lets add a dropdown for picking a character class. When user picks a particular character_class, the data about virtues should be fetched asynchronously (ajax)      -->
 <!--#TODO assuming we have such data mentioend in the previous todo, present virtues to the user as a choice. You have 100% freedom cwhen it comes to the interface, however consider that: 1) according to the game Manual user has to pick two. 2) some virtues may come up with an additional choice to be made by the user 3) user should be able to change his mind        -->
-<!--#TODO assuming the above is done, we have to preserve the user choices with relation to the current hero  -->
-  </div>
-  <div class="h-16">
-    <%= f.button :submit, t(:save_and_continue), class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"%>
-    <button class="bg-red-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-      <%= link_to t(:cancel), @hero, method: :delete, data: { confirm: t(:are_you_sure) } %>
-    </button>
-    <% end %>
-  </div>
+<!--#TODO assuming the above is done, we have to preserve the user choices with relation to the current hero -->
+    </div>
+    <div class="h-16">
+      <%= f.button :submit, t(:save_and_continue), class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"%>
+      <button class="bg-red-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+        <%= link_to t(:cancel), @hero, method: :delete, data: { confirm: t(:are_you_sure) } %>
+      </button>
+    </div>
+  <% end %>
 </div>

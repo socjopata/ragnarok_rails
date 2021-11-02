@@ -33,7 +33,9 @@ en:
   are_you_sure: Are you sure?
   basic_info_choose_head: Let us collect some of the basic information about the character you want to play as
   cancel: Cancel
+  char_class: Character class
   char_min: characters minimum
+  choose_virtue: Choose virtue
   confirm_instructions: idn't receive confirmation instructions?
   confirm_password: Password confirmation
   error:

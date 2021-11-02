@@ -2,14 +2,16 @@ pl:
   are_you_sure: Na pewno?
   basic_info_choose_head: Zbierzmy trochę informacji o postaci, którą chcesz grać
   cancel: Anuluj
+  char_class: Klasa Bohatera
   char_min: znaków minimum
+  choose_virtue: Zaleta Bohatera
   confirm_instructions: Nie dotarły do Ciebie instrukcje potwierdzenia?
   confirm_password: Potwierdź hasło
   error:
       one: błąd
       few: błędy
   forgot_passowrd: Nie pamiętasz hasła?
-  name: imię
+  name: Imię
   only_letters: Tylko litery są dopuszczalne
   password: Hasło
   plerror: błędy
