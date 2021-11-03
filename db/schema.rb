@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_01_180627) do
+ActiveRecord::Schema.define(version: 2021_11_04_124145) do
 
   create_table "character_classes", force: :cascade do |t|
-    t.string "name", null: false
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "internal_name"
+  end
+
+  create_table "hero_virtues", force: :cascade do |t|
+    t.integer "hero_id"
+    t.integer "virtue_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["hero_id"], name: "index_hero_virtues_on_hero_id"
+    t.index ["virtue_id"], name: "index_hero_virtues_on_virtue_id"
   end
 
   create_table "heros", force: :cascade do |t|
@@ -26,8 +35,6 @@ ActiveRecord::Schema.define(version: 2021_11_01_180627) do
     t.integer "user_id"
     t.boolean "work_in_progress"
     t.integer "character_class_id"
-    t.integer "virtue_1_internal_id"
-    t.integer "virtue_2_internal_id"
     t.index ["character_class_id"], name: "index_heros_on_character_class_id"
     t.index ["user_id"], name: "index_heros_on_user_id"
   end
@@ -55,8 +62,8 @@ ActiveRecord::Schema.define(version: 2021_11_01_180627) do
 
   create_table "virtues", force: :cascade do |t|
     t.integer "character_class_id", null: false
-    t.string "name", null: false
-    t.text "description", null: false
+    t.string "name"
+    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "internal_name"
