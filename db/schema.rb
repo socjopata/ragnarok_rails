@@ -13,10 +13,9 @@
 ActiveRecord::Schema.define(version: 2021_11_04_124145) do
 
   create_table "character_classes", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "internal_name"
   end
 
   create_table "hero_virtues", force: :cascade do |t|
@@ -62,11 +61,10 @@ ActiveRecord::Schema.define(version: 2021_11_04_124145) do
 
   create_table "virtues", force: :cascade do |t|
     t.integer "character_class_id", null: false
-    t.string "name"
-    t.text "description"
+    t.string "name", null: false
+    t.text "description", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "internal_name"
     t.index ["character_class_id"], name: "index_virtues_on_character_class_id"
   end
 
