@@ -33,15 +33,21 @@ en:
   are_you_sure: Are you sure?
   basic_info_choose_head: Let us collect some of the basic information about the character you want to play as
   cancel: Cancel
+  char_class: Character class
   char_min: characters minimum
+  choose_virtue: Choose virtue
   confirm_instructions: idn't receive confirmation instructions?
   confirm_password: Password confirmation
+  different_virtues: The virtues have to be different
   error:
       one: error
       few: errors
+  errors:
+    format: "%{message}"
   forgot_passowrd: Forgot your password?
   name: name
-  only_letters: Only letters allowed!
+  name_too_short: Name is too short.
+  only_letters: Name should include only letters.
   password: Password
   plerror: errors
   remember_me: Remember me

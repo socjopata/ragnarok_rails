@@ -2,15 +2,21 @@ pl:
   are_you_sure: Na pewno?
   basic_info_choose_head: Zbierzmy trochę informacji o postaci, którą chcesz grać
   cancel: Anuluj
+  char_class: Klasa Bohatera
   char_min: znaków minimum
+  choose_virtue: Zaleta Bohatera
   confirm_instructions: Nie dotarły do Ciebie instrukcje potwierdzenia?
   confirm_password: Potwierdź hasło
+  different_virtues: Zalety nie mogą być takie same!
   error:
       one: błąd
       few: błędy
+  errors:
+    format: "%{message}" #TODO I assume it is wrong approach and it will ommit every other attribute_name in error message in the future, so each translation will have to include extra translation for atribute name
   forgot_passowrd: Nie pamiętasz hasła?
-  name: imię
-  only_letters: Tylko litery są dopuszczalne
+  name: Imię
+  name_too_short: Imię jest za krótkie.
+  only_letters: Imię może zawierać tylko litery.
   password: Hasło
   plerror: błędy
   remember_me: Zapamiętaj mnie

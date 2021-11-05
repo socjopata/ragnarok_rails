@@ -2,14 +2,17 @@ class ChooseHeroClassController < ApplicationController
    before_action :authenticate_user!
   def show
     @form = CharacterClassAndBasicInfoForm.new(current_hero, params[:initial_choices]).as(current_user)
+    @character_classes = CharacterClass.all
   end
 
   def create
     @form = CharacterClassAndBasicInfoForm.new(current_hero, params[:initial_choices]).as(current_user)
+
     if @form.save
       redirect_to choose_hero_class_path #TODO
       # # :next_step_url
     else
+      @character_classes = CharacterClass.all
       respond_to do |format|
         format.html { render :show, status: :unprocessable_entity }
         format.json { render json: @form.errors, status: :unprocessable_entity }
