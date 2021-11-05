@@ -2,6 +2,7 @@ $(function () {
   $(document).on('change', '.remote-select', function (e) {
     let target = $(this).attr('data-target');
     let url = `/character_class/${$(this).find(":selected").attr("value")}/virtues`;
+    // TODO prevent from sending the request if {$(this).find(":selected").attr("value")} is null
     if (url) {
       $.ajax({
         url: url,
